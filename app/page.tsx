@@ -2,7 +2,7 @@ import { Notes } from "@/components/noteList";
 
 export default function Home() {
   return (
-    <div className="p-4 md:max-w-1/2">
+    <div className="p-6 md:max-w-1/2 @max-xs:p-3 ">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"

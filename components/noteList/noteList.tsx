@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 import {
   DndContext,
   closestCenter,
@@ -8,15 +8,15 @@ import {
   TouchSensor,
   useSensor,
   useSensors,
-} from '@dnd-kit/core';
+} from "@dnd-kit/core";
 import {
   arrayMove,
   SortableContext,
   verticalListSortingStrategy,
-} from '@dnd-kit/sortable';
-import { useNote } from '../../providers/NoteContext';
-import type { Note } from '../../providers/NoteContext';
-import { NoteListItem } from './noteListItem';
+} from "@dnd-kit/sortable";
+import { useNote } from "@/providers/NoteContext";
+import type { Note } from "@/providers/NoteContext";
+import { NoteListItem } from "./noteListItem";
 
 export function NoteList() {
   const { notes, setNotes } = useNote();
@@ -31,7 +31,7 @@ export function NoteList() {
         delay: 200,
         tolerance: 8,
       },
-    })
+    }),
   );
 
   const handleDragEnd = (event: any) => {
@@ -56,7 +56,7 @@ export function NoteList() {
         items={notes.map((note) => note.id)}
         strategy={verticalListSortingStrategy}
       >
-        <div className='grid md:grid-cols-1 sm:grid-cols-2 gap-4 p-10 pt-28'>
+        <div className="grid md:grid-cols-1 sm:grid-cols-2 gap-4 pt-28">
           {notes.map((note) => (
             <NoteListItem key={note.id} note={note} />
           ))}
