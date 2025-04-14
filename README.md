@@ -17,7 +17,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 │   │   ├── NoteList.tsx  # Note list component
 │   │   └── noteForm.tsx  # Note form component
 │   └── providers/        # Context providers
-│       └── FeatureContext.tsx # Feature state management
+│       └── NoteContext.tsx # Note state management
 ├── public/               # Static files
 └── types/               # TypeScript type definitions
 ```
@@ -66,7 +66,7 @@ npm run start
 yarn start
 ```
 
-## Features
+## Notes
 
 - Task management with drag-and-drop functionality
 - Persian calendar integration
